@@ -31,12 +31,12 @@ We can use various profiles for Spring boot applications. Steps involved are
 3. Create a configuration bean
     
     
-    import lombok.Getter;
-    import lombok.Setter;
-    import org.springframework.boot.context.properties.ConfigurationProperties;
-    import org.springframework.context.annotation.Bean;
-    import org.springframework.context.annotation.Configuration;
-    import org.springframework.context.annotation.Profile;
+        import lombok.Getter;
+        import lombok.Setter;
+        import org.springframework.boot.context.properties.ConfigurationProperties;
+        import org.springframework.context.annotation.Bean;
+        import org.springframework.context.annotation.Configuration;
+        import org.springframework.context.annotation.Profile;
     
     
         @Configuration
@@ -74,4 +74,4 @@ We can use various profiles for Spring boot applications. Steps involved are
                 System.out.println(details);
                 return details;
             }
-    }
+        }
