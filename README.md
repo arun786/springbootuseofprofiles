@@ -5,21 +5,22 @@ We can use various profiles for Spring boot applications. Steps involved are
 
 1. Create different application.properties
 
-    1. application-dev.properties
 
-    spring.datasource.driver-class-name=org.h2.Driver
-    spring.datasource.url=jdbc:h2:mem:testdb
-    spring.datasource.username=sa
-    spring.datasource.password=
+    1. application-dev.properties
     
-    application.name = This is the primary application property  for ${spring.application.name} for dev 
+        spring.datasource.driver-class-name=org.h2.Driver
+        spring.datasource.url=jdbc:h2:mem:testdb
+        spring.datasource.username=sa
+        spring.datasource.password=
+    
 
     2. application-qa.properties
+
     
-    spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-    spring.datasource.url=jdbc:mysql://localhost:3306/tcrmd00
-    spring.datasource.username=root
-    spring.datasource.password=root
+        spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+        spring.datasource.url=jdbc:mysql://localhost:3306/tcrmd00
+        spring.datasource.username=root
+        spring.datasource.password=root
     
 2. Specify the profile which is required in application.properties
 
@@ -27,7 +28,6 @@ We can use various profiles for Spring boot applications. Steps involved are
     
 3. Create a configuration bean
     
-    package com.arun.springbootuseofprofiles.config;
     
     import lombok.Getter;
     import lombok.Setter;
