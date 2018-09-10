@@ -9,15 +9,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
+
 @RestController
 public class StudentController {
 
     @Autowired
     private StudentService studentService;
 
-    @PostMapping("/students/v1/student/name/{name}/age/{age}/standard/{standard}")
-    public ResponseEntity<Student> createStudent(@PathVariable String name, @PathVariable String age, @PathVariable String standard) {
-        Student student = new Student(name, age, standard);
+    @PostMapping("/students/v1/student/name/{name}/age/{age}/standard/{standard}/year/{year}")
+    public ResponseEntity<Student> createStudent(@PathVariable String name, @PathVariable String age, @PathVariable String standard, @PathVariable String year) {
+        Student student = new Student(name, age, year);
         Student student1 = studentService.createStudent(student);
         ResponseEntity<Student> response = new ResponseEntity<>(student1, HttpStatus.OK);
         return response;
